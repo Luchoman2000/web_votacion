@@ -1,0 +1,7 @@
+{% extends "static/header.html" %} 
+{% block title %}Hello{% endblock %} 
+{% block content %}
+    <img src="{{ imagen.imagen_original.url }}" alt="Original" />
+    <img src="{{ imagen.imagen_procesada.url }}" alt="Procesada" />
+
+{% endblock %}
