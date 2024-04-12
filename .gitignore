@@ -1,6 +1,6 @@
 /media
 /web_votacion_ocr/migrations
 /web_votacion_ocr/__pycache__
-/venv
+/venv/**
 /web_votacion/__pycache__
 db.sqlite3
