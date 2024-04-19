@@ -19,12 +19,17 @@ from django.urls import include, path
 from web_votacion_ocr import views
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import index
 
 
 urlpatterns = [
+    path('', views.dashboard, name='dashboard'),
+    path('lista/', views.list_actas, name='list_actas'),
+    path('subir_actas/', views.upload_actas, name='upload_actas'),
+    path('datos_actas/', views.data_actas, name='data_actas'),
     path('admin/', admin.site.urls),
     path('index_text/', views.index_test, name='index_test'),
-    path('dashboard/', views.dashboard, name='dashboard'),
     path('subir/', views.procesar_imagen_view, name='subir_imagen'),
     path('imagen/<int:pk>/', views.ver_imagen_view, name='ver_imagen'),
+    path('', index, name='index')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

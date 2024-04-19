@@ -3,4 +3,6 @@
 /web_votacion_ocr/__pycache__
 /venv/**
 /web_votacion/__pycache__
+/node_modules/**
+/static/CACHE/**
 db.sqlite3
